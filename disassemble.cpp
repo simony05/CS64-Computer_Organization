@@ -40,7 +40,7 @@ string disassemble( string hex ) {
     }
     string s = binary.substr(16);
     bool neg = false;
-    if (s[0] == '1') {
+    if (s[0] == '1' && binary.substr(0, 6) == "001000") {
         neg = true;
         for (int i = 0; i < s.size(); i++) {
             if (s[i] == '0') s[i] = '1';
