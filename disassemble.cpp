@@ -67,7 +67,7 @@ string disassemble( string hex ) {
     else if (opcode == "001101") instr += "ori ";
     // rt
     string rt = binary.substr(11, 5);
-    if (rt == "01000") instr += "$t0 ";
+    if (rt == "01000") instr += "$t0, ";
     else if (rt == "01001") instr += "$t1, ";
     else if (rt == "01010") instr += "$t2, ";
     else if (rt == "01011") instr += "$t3, ";
@@ -77,7 +77,7 @@ string disassemble( string hex ) {
     else if (rt == "01111") instr += "$t7, ";
     // rs
     string rs = binary.substr(6, 5);
-    if (rs == "01000") instr += "$t0 ";
+    if (rs == "01000") instr += "$t0, ";
     else if (rs == "01001") instr += "$t1, ";
     else if (rs == "01010") instr += "$t2, ";
     else if (rs == "01011") instr += "$t3, ";
