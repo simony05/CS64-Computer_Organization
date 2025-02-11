@@ -20,7 +20,7 @@ string disassemble( string hex ) {
     //
     // YOUR CODE GOES HERE!!
     string binary = "";
-    for (char byte : hex.substr(2)) {
+    for (char byte : hex) {
         if (byte == '0') binary += "0000";
         else if (byte == '1') binary += "0001";
         else if (byte == '2') binary += "0010";
@@ -40,7 +40,7 @@ string disassemble( string hex ) {
     }
     string s = binary.substr(16);
     bool neg = false;
-    if (s[0] == '1' && binary.substr(0, 6) == "001000") {
+    if (s[0] == '1') {
         neg = true;
         for (int i = 0; i < s.size(); i++) {
             if (s[i] == '0') s[i] = '1';
