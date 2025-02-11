@@ -93,7 +93,7 @@ int main() {
 
     string hex, inst;
     
-    cout << "Enter your assembled instruction as a hex number: 0x";
+    cout << "Enter your assembled instruction as a hex number: 0x" << endl;
     cin >> hex;
     
     inst = disassemble( hex );
