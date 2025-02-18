@@ -18,7 +18,7 @@ printArr:
 	addi $t0, $t0, -4
 
 loop: 
-    blt $a1, 0, exitfunc
+    ble $a1, 0, exitfunc
 
 	li $v0, 1
 	lw $a0, 0($t0)
